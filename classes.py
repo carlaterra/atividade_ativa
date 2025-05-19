@@ -7,7 +7,6 @@ class Clientes ():
     def __str__(self):
         return f"Nome Cliente: {self.nome} e Telefone: {self.telefone}"
 
-
 class Produtos ():
     def __init__(self, nome, tamanho, quantidade, valor):
         self.nome = nome
@@ -29,10 +28,8 @@ class Pedidos ():
         self.produtos = produtos 
         self.produtoTotal = produtoTotal
         self.data = data
-
     def contaTotal(self): 
         self.produtoTotal = sum(self.produtoTotal)
-
     def __str__(self):
         return f"#### RESUMO DO PEDIDO ####\n\n---> {self.cliente}\n\n---> Total Conta = {self.produtoTotal}\n\n---> Data e Hora: {self.data}\n\nITENS SELECIONADOS\n\n{self.produtos}\n\n"
 
