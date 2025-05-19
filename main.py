@@ -10,7 +10,6 @@ print ('\n')
 
 print ('Produtos disponiveis no Coffee Shop')
 
-produto = Produtos('Coffe black', 'Large', 2 ,10.50)
 dicionarioProdutos = {
     "1": Produtos('Coffe black', 'Large', 99 ,10.50),
     "2": Produtos('Muffin', 'Small', 99 , 8.50),
@@ -37,7 +36,7 @@ while opcao == 's':
     produto.totalProduto(quantidadeProduto)
     listaProdutosTotal.append(produto.total)
     listaProdutos.append(produto)
-    opcao = input ('Deseja informar outro produto: < s ou n>  ')
+    opcao = input ('Deseja informar outro produto: <s ou n>  ')
     
 
 contaTotal = sum(listaProdutosTotal)
@@ -45,13 +44,4 @@ contaTotal = sum(listaProdutosTotal)
 pedido = Pedidos (cliente, listaProdutos, listaProdutosTotal, 
 datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 pedido.contaTotal()
-
-
-
-       
-
-
-
-
-
 print (pedido)
